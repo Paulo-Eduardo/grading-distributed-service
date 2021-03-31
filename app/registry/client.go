@@ -81,6 +81,7 @@ func RegisterService(r Registration) error {
 }
 
 func ShutdownService(serviceURL string) error {
+	fmt.Println("TESTE: " + ServicesURL)
 	req, err := http.NewRequest(http.MethodDelete,
 		ServicesURL,
 		bytes.NewBuffer([]byte(serviceURL)))
